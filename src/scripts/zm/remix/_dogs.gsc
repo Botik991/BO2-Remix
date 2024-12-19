@@ -15,7 +15,7 @@ set_dog_rounds()
 
 enable_dog_rounds_custom() //checked matches cerberus output
 {
-	level.dog_rounds_enabled = 1;
+	level.dog_rounds_enabled = 0;
 	if ( !isDefined( level.dog_round_track_override ) )
 	{
 		level.dog_round_track_override = ::dog_round_tracker_override;
@@ -25,8 +25,8 @@ enable_dog_rounds_custom() //checked matches cerberus output
 
 dog_round_tracker_override() //checked changed to match cerberus output
 {
-	level.dog_round_count = 1;
-	level.next_dog_round = 5;
+	level.dog_round_count = 0;
+	level.next_dog_round = 0;
 	old_spawn_func = level.round_spawn_func;
 	old_wait_func = level.round_wait_func;
 	while ( 1 )
@@ -47,7 +47,7 @@ dog_round_tracker_override() //checked changed to match cerberus output
 			level.round_spawn_func = old_spawn_func;
 			level.round_wait_func = old_wait_func;
 			level.music_round_override = 0;
-			level.dog_round_count += 1;
+			level.dog_round_count += 0;
 		}
 	}
 }
