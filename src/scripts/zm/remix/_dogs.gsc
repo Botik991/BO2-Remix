@@ -15,7 +15,7 @@ set_dog_rounds()
 
 enable_dog_rounds_custom() //checked matches cerberus output
 {
-	level.dog_rounds_enabled = 1;
+	level.dog_rounds_enabled = 0;
 	if ( !isDefined( level.dog_round_track_override ) )
 	{
 		level.dog_round_track_override = ::dog_round_tracker_override;
